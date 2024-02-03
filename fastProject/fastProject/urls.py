@@ -18,6 +18,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('calc.urls')), #for home page you have to look for calc.urls 
+    path('', include('calc.urls')), #for home page you have to look for calc.urls , 
     path('admin/', admin.site.urls),
 ]
