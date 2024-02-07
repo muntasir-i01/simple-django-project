@@ -16,10 +16,12 @@ def index(request):
     dest1.desc = 'A run cycle is a sequence of drawings or frames in an animation that show a character running or jogging.'
 
     dest2 = Destination()
+    dest2.name = 'Modern Cycle'
     dest2.price = 300
     dest2.desc = 'The great majority of modern bicycles have a frame with upright seating that looks much like the first chain-driven bike.'
-    #dest0.img = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fvectors%2Fmountain-bike-bicycle-activity-4642560%2F&psig=AOvVaw2Y31W6Fb6UIKlGmDVvkTPq&ust=1707385278538000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMiwxoD4mIQDFQAAAAAdAAAAABAD'
+    dest0.img = 'img.png'
+
+    dests = [dest0, dest1, dest2]
 
 
-
-    return render(request, 'index.html', {'dest1': dest1, 'dest0': dest0, 'dest2': dest2})
+    return render(request, 'index.html', {'dests': dests}) #passing the object value to html page
