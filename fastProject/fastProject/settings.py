@@ -121,3 +121,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATIC_URL = '/static/'
+STATICFIELS_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+] #We are informing django where it will find all the files
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
