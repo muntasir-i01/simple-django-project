@@ -192,6 +192,17 @@ button {
     cursor: pointer;
 }
 
+
+
+#btn_offer {
+    border: #f7c17b;
+    background-color: #1d1f1e;
+    color: #fefeff;
+    padding: 5px;
+    margin: 5px;
+} 
+
+
 .full {
     float: left;
     width: 100%;
