@@ -31,12 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'travello.apps.TravelloConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'fastProject',
 ]
 
 MIDDLEWARE = [
@@ -76,10 +78,12 @@ WSGI_APPLICATION = 'fastProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'fastproject',
-        'USER': 'employees',
-        'PASSWORD': 'admin12',
-        'HOST': 'localhost'
+        'NAME': 'deskproject',
+        'USER': 'myuser',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '5432',
+
     }
 }
 
