@@ -171,7 +171,7 @@
                      <br>
                      <br>
                      {% if dest.offer %}
-                     <h4 id ="btn_offer">Special Offer</h4> {% comment %} This css id didn't work {% endcomment %}
+                     <div class="contact_bt"><a href="offer.html">Special Offer</a></div> {% comment %} here css id didn't work {% endcomment %}
                      {% endif %}
                      <div class="btn_main">
                         <div class="buy_bt"><a href="#">Buy Now</a></div>
@@ -181,7 +181,7 @@
                   <div class="col-md-6">
                      <div class="box_main_3">
                         <h6 class="number_text_2">{{dest.id}}</h6>
-                        <div class="image_2"><img src="{{baseUrl}}/{{dest.img}}"></div>
+                        <div class="image_2"><img src="{{dest.img.url}}"></div>
                      </div>
                   </div>
                </div>

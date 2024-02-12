@@ -9,7 +9,7 @@ def index(request):
     dest200 = Destination()
     dest200.name = 'Cycling\nto\nSchool'
     dest200.price = 250
-    dest200.img = 'bikee.webp'
+    dest200.img = 'img-1.png'
     dest200.id = 5
     dest200.offer = True
 
