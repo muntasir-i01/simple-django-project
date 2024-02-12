@@ -133,3 +133,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 #We are informing django where it will find all the files
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
+
+#specify the url
+MEDIA_URL = '/media/'
+#specify the location of media file
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
