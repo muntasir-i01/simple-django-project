@@ -4,8 +4,26 @@ from django.contrib import messages
 
 # Create your views here.
 
+def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password'] 
+        
+        user = auth.authenticate(request, username=username, password=password)
+        
+        if user is not None:
+            auth.login(request, user)
+            return redirect("/")
+        
+        else:
+            messages.info(request, 'Invalid Credentials')
+            return redirect('login')
+        
+    else:
+        return render(request, 'login.html')
 
-def register(request):
+
+def register(request):  #method
 
     if request.method == 'POST':
         first_name = request.POST['first_name']
@@ -27,7 +45,8 @@ def register(request):
             else:
                 user = User.objects.create_user(username=username, first_name=first_name, last_name=last_name, email=email, password=password1)
                 user.save();
-                print('user created')              
+                print('user created')
+                return redirect('login')              
             
         
         else:
@@ -43,3 +62,8 @@ def register(request):
     else:
         
         return render(request, 'register.html')  #when call the register.html that means you are sending a get request
+    
+    
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
